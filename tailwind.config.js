@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         darkBlack: '#0e0e0e',
         purple: '#5D34FF',
+        tPurple: '#A566FF',
         bColor: '#231F20',
       },
       backgroundImage: {
