@@ -2,6 +2,7 @@ import FirstSection from "./components/Home/FirstSection";
 import AboutusSection from "./components/Home/AboutusSection";
 import PortfolioSection from "./components/Home/PortfolioSection";
 import ServiceSection from "./components/Home/ServiceSection";
+import WorkProcess from "./components/Home/WorkProcess";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="bg-darkBlack my-10" id="service">
           <ServiceSection />
         </div>
+        <WorkProcess />
     </main>
   );
 }

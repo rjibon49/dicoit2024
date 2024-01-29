@@ -82,6 +82,45 @@ body {
   width: 75% !important;
   height: auto !important;
 }
+.processBorderF {
+  border: 4px solid transparent;
+  position: relative;
+  
+}
+.processBorderF::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0% 0% 110px 110px ;
+  padding: 4px;
+  background:linear-gradient(30deg, #5D34FF 70%, transparent 30%); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+.processBorderR {
+  border: 4px solid transparent;
+  position: relative;
+  
+}
+.processBorderR::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 110px 110px 0% 0% ;
+  padding: 4px;
+  background:linear-gradient(-210deg,#5D34FF 70%, transparent 30%); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+.workHeight {
+  min-height: 700px;
+}
 /* .bgImage {
   background-image: url(/public/src/img/backgroundImage.png);
   background-repeat: no-repeat;
