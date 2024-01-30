@@ -1,5 +1,7 @@
 import "./globals.css";
+import 'react-toastify/dist/ReactToastify.css';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 export const metadata = {
@@ -13,6 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
           {children}
+        <Footer />
       </body>
     </html>
   );

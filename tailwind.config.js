@@ -13,6 +13,7 @@ module.exports = {
         bPurple: '#8A37FF',
         tPurple: '#A566FF',
         bColor: '#231F20',
+        lightGray: '#f5f5f5a6',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

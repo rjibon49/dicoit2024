@@ -68,7 +68,7 @@ const ServiceSection = () => {
         }
     };
     return (
-        <div className="container mx-auto py-24">
+        <div className="container mx-auto py-24" id="service">
             <div className="w-2/4 mb-16">
                 <p className="text-white text-xl font-semibold">Services</p>
                 <p className="mb-5 text-white text-xl64 font-bold">What We Offer</p>

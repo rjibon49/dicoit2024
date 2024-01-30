@@ -7,7 +7,7 @@ const menuItems = [
   { id: 'Aboutus', label: 'About Us' },
   { id: 'portfolio', label: 'Portfolio' },
   { id: 'workprocess', label: 'Work Process' },
-  { id: 'contactus', label: 'Contact Us' },
+  { id: 'contact', label: 'Contact Us' },
 ];
 
 const Header = () => {
@@ -56,12 +56,12 @@ const Header = () => {
         )}
 
         {/* Menu for Desktop */}
-        <ul className="hidden lg:flex lg:flex-row lg:space-x-4 items-center justify-end">
+        <ul className="hidden lg:flex lg:flex-row gap-12 items-center justify-end">
           {menuItems.map((item, index) => (
             <li
               key={item.id}
               className={`${
-                index === menuItems.length - 1 ? 'bg-purple px-12 py-6 rounded-full' : ''
+                index === menuItems.length - 1 ? 'bg-purple px-12 py-4 rounded-full' : ''
               }`}
             >
               <Link
