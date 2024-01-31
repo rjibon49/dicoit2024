@@ -69,42 +69,44 @@ const ServiceSection = () => {
     };
     return (
         <div className="container mx-auto py-24" id="service">
-            <div className="w-2/4 mb-16">
-                <p className="text-white text-xl font-semibold">Services</p>
-                <p className="mb-5 text-white text-xl64 font-bold">What We Offer</p>
-                <p className="text-white text-xl">
-                    DicoIT delivers a spectrum of digital solutions, from expert UI/UX design to comprehensive web and app development. Empower your brand with our tailored services, driving innovation and excellence in the digital realm.
-                </p>
-            </div>
+            <div className='mx-2'>
+                <div className="2xl:w-2/4 md:w-9/12 w-full mb-16">
+                    <p className="text-white text-xl font-semibold">Services</p>
+                    <p className="mb-5 text-white text-xl64 font-bold">What We Offer</p>
+                    <p className="text-white text-xl">
+                        DicoIT delivers a spectrum of digital solutions, from expert UI/UX design to comprehensive web and app development. Empower your brand with our tailored services, driving innovation and excellence in the digital realm.
+                    </p>
+                </div>
 
-            <div className="w-3/4 mx-auto">
-            {serviceList.map((service) => (
-                <div
-                key={service.id}
-                className="border-b-[1px] border-b-[#7d7d7d] cursor-pointer"
-                onClick={() => handleServiceClick(service.id)}
-                >
-                <div className="flex justify-between mb-10 mt-4">
-                    <div className="flex">
-                        <p className="text-[#AAAAAA] text-base me-3">{service.id}</p>
-                        <p className="text-white text-5xl font-bold pt-3">{service.title}</p>
-                    </div>
-                    <div className="pt-3">
-                    <FontAwesomeIcon
-                        icon={selectedService === service.id ? faArrowDown : faArrowRight}
-                        className="text-white text-4xl w-10 transition-transform duration-300 ease-in-out transform"
-                    />
-                    </div>
-                </div>
+                <div className="w-4/5 mx-auto">
+                {serviceList.map((service) => (
                     <div
-                        className={`text-white text-lg mb-4 overflow-hidden transition-max-height ${
-                        selectedService === service.id ? 'max-h-32' : 'max-h-0'
-                        }`}
+                    key={service.id}
+                    className="border-b-[1px] border-b-[#7d7d7d] cursor-pointer"
+                    onClick={() => handleServiceClick(service.id)}
                     >
-                        {service.description}
+                    <div className="flex justify-between mb-10 mt-4">
+                        <div className="flex">
+                            <p className="text-[#AAAAAA] text-base me-3">{service.id}</p>
+                            <p className="text-white text-4xl 2xl:text-5xl xl:text-5xl lg:text-5xl font-bold pt-3">{service.title}</p>
+                        </div>
+                        <div className="pt-3">
+                        <FontAwesomeIcon
+                            icon={selectedService === service.id ? faArrowDown : faArrowRight}
+                            className="text-white text-4xl w-10 transition-transform duration-500 ease-in transform"
+                        />
+                        </div>
                     </div>
+                        <div
+                            className={`text-white text-lg mb-4 overflow-hidden transition-max-height ${
+                            selectedService === service.id ? 'max-h-32' : 'max-h-0'
+                            }`}
+                        >
+                            {service.description}
+                        </div>
+                    </div>
+                ))}
                 </div>
-            ))}
             </div>
         </div>
       );

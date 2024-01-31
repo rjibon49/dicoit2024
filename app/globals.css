@@ -163,7 +163,7 @@ input:focus, textarea:focus {
   right: 28%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 580px) {
   .subsInput {
     width: 100%;
   }
